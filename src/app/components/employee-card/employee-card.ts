@@ -6,7 +6,7 @@ import { RouterModule } from '@angular/router';
   selector: 'app-employee-card',
   imports: [CommonModule,RouterModule],
   template: `
-  <div class ="card">
+  <div class ="card" appEmployeeDireactive>
   <h3>{{employee.name}}</h3>
   <p>Position: {{employee.position}}</p>
   <p>Company: {{employee.company}}</p>
