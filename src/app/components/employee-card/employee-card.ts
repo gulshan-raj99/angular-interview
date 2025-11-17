@@ -10,6 +10,8 @@ import { RouterModule } from '@angular/router';
   <h3>{{employee.name}}</h3>
   <p>Position: {{employee.position}}</p>
   <p>Company: {{employee.company}}</p>
+
+  <a [routerLink]="['/employee', employee.id]">View Details</a>
   </div>`,
   styleUrl: './employee-card.css',
 })
