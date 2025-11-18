@@ -1,0 +1,15 @@
+<h2>Employee Search</h2>
+
+<!--To way data binding-->
+<input [(ngModel)]="searchText" (keyup)="filterEmployees()" placeholder="search Employee">
+
+<!--Structural Direactive + Interpolation -->
+<ul>
+    <li *ngFor="let emp of filtered">
+        {{ emp.name }}
+    </li>
+</ul>
+
+<!-- Property Binding -->
+
+<p [hidden]="filtered.length > 0">No Employee found</p>
