@@ -13,3 +13,9 @@
     <button [disabled]="!loginForm.valid">Submit</button>
     
 </form>
+
+
+<div *ngIf="data">
+    <p>Form Submitted data:</p>
+    <pre>{{data | json }}</pre>
+</div>
