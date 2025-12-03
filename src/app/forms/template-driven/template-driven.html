@@ -1,0 +1,42 @@
+<form #registrationForm="ngForm" (ngSubmit)="register(registrationForm.value)">
+  <div>
+    <label>Name:</label>
+    <input type="text" name="name" ngModel required />
+  </div>
+  <br />
+
+  <div>
+    <label>Email:</label>
+    <input type="email" name="email" ngModel required />
+  </div>
+  <br />
+
+  <div>
+    <label>Password:</label>
+    <input type="password" name="password" ngModel minlength="6" required />
+  </div>
+  <br />
+
+  <div>
+    <button [disabled]="registrationForm.invalid">Submit</button>
+  </div>
+</form>
+
+
+<form #loginForm="ngForm" (ngSubmit)="onLogin(loginForm.value)">
+  <div>
+    <label>Email: </label>
+    <input type="email" name="email" required placeholder="email" />
+  </div>
+  <br />
+
+  <div>
+    <label>Password: </label>
+    <input type="password" name="password" ngModel required placeholder="password" />
+  </div>
+  <br />
+
+  <div>
+    <button [disabled]="loginForm.invalid">Login</button>
+  </div>
+</form>
