@@ -15,12 +15,13 @@ export class UserDetail {
   constructor(private userService: UserService) {}
 
   ngOnInit() {
+    this.users = this.userService.getUsers();
 
   }
-  loadUser() {
-    this.userService.getUser().subscribe(res =>{
-      this.users = res;
-    })
-  }
+  // loadUser() {
+  //   this.userService.getUser().subscribe(res =>{
+  //     this.users = res;
+  //   })
+  // }
 
 }
